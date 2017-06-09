@@ -1,0 +1,35 @@
+To test the LED in the terminal:
+	sudo -i
+	echo '18' > /sys/class/gpio/export
+	echo 'out' > /sys/class/gpio/gpio18/direction
+	echo '1' > /sys/class/gpio/gpio18/value
+	echo '0' > /sys/class/gpio/gpio18/value
+	echo '18' > /sys/class/gpio/unexport
+
+To compile:
+	g++ -o ledTest ledTest.cpp -lwiringPi
+
+To run the program:
+	sudo ./ledTest
+
+To edit the program:
+	nano ledTest.cpp
+
+NOTES: pin 1=red; 4=green; 5=blue; 
+
+Using GitHub:
+rm -rf .git
+git init
+
+git remote rm origin
+git remote add origin https://github.com/jichang2/test.git
+
+git add Desktop/Ji/ledTest.cpp
+git status
+
+git commit -am 'Test code for LED'
+
+git push -u origin master
+
+git pull origin master
+git clone https://github.com/UMDBPP/HASP
