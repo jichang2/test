@@ -1,6 +1,5 @@
 // This code is written for a Raspberry Pi to test a 4-pin LED
 // LED PINS: r=12;g=16;b=18;
-// Test for GitHub
 
 #include <wiringPi.h>
 
